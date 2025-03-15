@@ -1,54 +1,124 @@
-Company XYZ Inc. 
-Annual Financial Report
 
-Fiscal Year Ending December 31, 2021
----------------------------------------
-Executive Summary:
-Company XYZ Inc. posted a robust financial performance in fiscal year 2021. Revenues reached approximately $5,000,000, driven by strong sales across various segments. Key achievements include market expansion and significant capital investments that positioned the company for future growth.
+Meta Reports Fourth Quarter and Full Year 2024 Results
 
-Income Statement:
-    - Revenue: $5,000,000
-    - Cost of Goods Sold: $3,000,000
-    - Gross Profit: $2,000,000
-    - Operating Expenses: $800,000
-    - Operating Income: $1,200,000
-    - Net Income: $800,000
-    - Earnings per Share (EPS): $2.00
+MENLO PARK, Calif. – January 29, 2025 – Meta Platforms, Inc. (Nasdaq: META) today reported financial results for the 
+quarter and full year ended December 31, 2024.
 
-Balance Sheet:
-    - Total Assets: $7,500,000
-    - Total Liabilities: $3,000,000
-    - Shareholders' Equity: $4,500,000
+"We continue to make good progress on AI, glasses, and the future of social media," said Mark Zuckerberg, Meta founder 
+and CEO. "I'm excited to see these efforts scale further in 2025."
 
-Cash Flow Statement:
-    - Net Cash from Operating Activities: $900,000
-    - Net Cash Used in Investing Activities: $-300,000
-    - Net Cash from Financing Activities: $50,000
 
------------------------------------------------------------
-Fiscal Year Ending December 31, 2022
------------------------------------------------------------
-Executive Summary:
-For fiscal year 2022, Company XYZ Inc. continued its growth trajectory, with expected revenue surpassing last year's figures and reaching approximately $5,500,000. The company focused on expanding its product line and entering emerging markets.
+Fourth Quarter and Full Year 2024 Financial Highlights
 
-Income Statement (Projected):
-    - Projected Revenue: $5,500,000
-    - Projected Cost of Goods Sold: $3,300,000
-    - Projected Gross Profit: $2,200,000
-    - Projected Operating Expenses: $900,000
-    - Projected Operating Income: $1,300,000
-    - Projected Net Income: $900,000
-    - Projected EPS: $2.25
+Revenue:
+- Q4 2024: $48.39 billion (+21% YoY)
+- Full Year 2024: $164.50 billion (+22% YoY)
 
-Balance Sheet (Projected):
-    - Projected Total Assets: $8,000,000
-    - Projected Total Liabilities: $3,200,000
-    - Projected Shareholders' Equity: $4,800,000
+Income & Expenses:
+- Costs & Expenses: $25.02 billion (Q4), $95.12 billion (Full Year)
+- Income from Operations: $23.37 billion (Q4), $69.38 billion (Full Year)
+- Operating Margin: 48% (Q4), 42% (Full Year)
+- Net Income: $20.84 billion (Q4), $62.36 billion (Full Year)
+- EPS: $8.02 (Q4), $23.86 (Full Year)
 
-Cash Flow Statement (Projected):
-    - Projected Net Cash from Operating Activities: $1,000,000
-    - Projected Net Cash Used in Investing Activities: $-400,000
-    - Projected Net Cash from Financing Activities: $100,000
+Operational Highlights:
 
-Conclusion:
-Company XYZ Inc. remains committed to innovation and excellence, ensuring long-term growth through strategic investments and market development initiatives. 
+- Family daily active people (DAP): 3.35 billion (Dec 2024, +5% YoY)
+- Ad impressions: +6% (Q4), +11% (Full Year)
+- Average price per ad: +14% (Q4), +10% (Full Year)
+- Capital Expenditures: $14.84 billion (Q4), $39.23 billion (Full Year)
+- Cash & Marketable Securities: $77.81 billion (as of Dec 31, 2024)
+- Long-Term Debt: $28.83 billion
+- Headcount: 74,067 (+10% YoY)
+
+CFO Outlook for 2025:
+
+- Q1 2025 Revenue Estimate: $39.5B - $41.8B (+8-15% YoY)
+- Total Expenses 2025: Expected between $114B - $119B
+- Capital Expenditures 2025: Expected $60B - $65B
+- Tax Rate Estimate: 12-15%
+
+Business Segments:
+
+Family of Apps (FoA):
+- Revenue: $47.3B (Q4), $162.4B (Full Year)
+- Operating Income: $87.1B (Full Year)
+
+Reality Labs (RL):
+- Revenue: $1.1B (Q4), $2.1B (Full Year)
+- Operating Loss: -$17.7B
+
+Balance Sheet (as of Dec 31, 2024):
+
+Assets:
+- Cash & Equivalents: $43.89B
+- Marketable Securities: $33.93B
+- Accounts Receivable: $16.99B
+- Total Assets: $276.05B
+
+Liabilities:
+- Accounts Payable: $7.69B
+- Operating Lease Liabilities: $18.29B
+- Long-Term Debt: $28.83B
+- Total Liabilities: $93.42B
+
+Stockholders’ Equity:
+- Common Stock & Paid-In Capital: $83.23B
+- Retained Earnings: $102.51B
+- Total Equity: $182.64B
+
+Cash Flow Summary:
+- Operating Cash Flow: $91.3B
+- Investing Cash Flow: -$47.1B
+- Financing Cash Flow: -$40.8B
+
+
+Tata Motors Standalone Balance Sheet
+
+Equities and Liabilities:
+
+Shareholders' Funds:
+- Equity Share Capital: Rs. 766.50 Cr (Mar 2024), Rs. 766.02 Cr (Mar 2023)
+- Reserves and Surplus: Rs. 29,374.83 Cr (Mar 2024), Rs. 21,701.37 Cr (Mar 2023)
+- Total Shareholders’ Funds: Rs. 30,141.33 Cr (Mar 2024), Rs. 22,467.39 Cr (Mar 2023)
+
+Non-Current Liabilities:
+- Long Term Borrowings: Rs. 5,235.67 Cr (Mar 2024)
+- Deferred Tax Liabilities (Net): Rs. 49.78 Cr
+- Other Long Term Liabilities: Rs. 1,392.16 Cr
+- Long Term Provisions: Rs. 1,936.92 Cr
+- Total Non-Current Liabilities: Rs. 8,614.53 Cr
+
+Current Liabilities:
+- Short Term Borrowings: Rs. 8,535.37 Cr
+- Trade Payables: Rs. 8,826.46 Cr
+- Other Current Liabilities: Rs. 8,830.41 Cr
+- Short Term Provisions: Rs. 1,133.92 Cr
+- Total Current Liabilities: Rs. 27,326.16 Cr
+
+Total Capital and Liabilities: Rs. 66,083.74 Cr
+
+Assets:
+
+Non-Current Assets:
+- Tangible Assets: Rs. 11,990.26 Cr
+- Intangible Assets: Rs. 2,353.79 Cr
+- Capital Work-In-Progress: Rs. 645.03 Cr
+- Intangible Assets Under Development: Rs. 588.92 Cr
+- Fixed Assets: Rs. 15,578.00 Cr
+- Non-Current Investments: Rs. 30,315.57 Cr
+- Deferred Tax Assets (Net): Rs. 1,558.65 Cr
+- Long Term Loans and Advances: Rs. 101.89 Cr
+- Other Non-Current Assets: Rs. 3,321.96 Cr
+- Total Non-Current Assets: Rs. 50,876.07 Cr
+
+Current Assets:
+- Current Investments: Rs. 1,993.50 Cr
+- Inventories: Rs. 3,470.38 Cr
+- Trade Receivables: Rs. 2,765.16 Cr
+- Cash and Cash Equivalents: Rs. 5,150.96 Cr
+- Short Term Loans and Advances: Rs. 132.19 Cr
+- Other Current Assets: Rs. 1,695.48 Cr
+- Total Current Assets: Rs. 15,207.67 Cr
+
+Total Assets: Rs. 66,083.74 Cr
