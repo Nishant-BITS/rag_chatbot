@@ -18,7 +18,8 @@ The tasks included are:
    - Validates that user queries are financially related by checking for key financial keywords.
 5. Application Interface using Streamlit:
    - A web-based interface that maintains conversation history, allows multi-turn interaction, 
-     and displays a confidence score (derived from cosine similarity) with each response.
+     displays a confidence score (derived from cosine similarity) with each response, and shows a 
+     loader while the query is being processed.
      
 Usage:
     Place your financial report in "data/financial_report.txt"
@@ -75,7 +76,7 @@ def chunk_text(text: str, max_length: int = 300, overlap: int = 50) -> list:
         chunks.append(" ".join(chunk))
         if end >= len(words):
             break
-        start = end - overlap  # Overlap with previous chunk to preserve context.
+        start = end - overlap  # Overlap to include context in next chunk
     return chunks
 
 # -------------------------------
@@ -108,7 +109,7 @@ class EmbeddingRetriever:
         Parameters:
             query (str): The user's query.
             top_k (int): Number of top results to return.
-
+        
         Returns:
             list: Each element is a tuple (chunk, cosine similarity score).
         """
@@ -142,7 +143,7 @@ class BM25Retriever:
         Parameters:
             query (str): The user query.
             top_k (int): Number of top results to return.
-
+        
         Returns:
             list: Each element is a tuple (chunk, BM25 score).
         """
@@ -172,12 +173,12 @@ class ResponseGenerator:
     def generate_response(self, query: str, context: str, max_length: int = 150) -> str:
         """
         Generate a response by combining the query with the retrieved context.
-
+        
         Parameters:
             query (str): The user's query.
             context (str): Context retrieved from the financial report.
             max_length (int): Maximum length of the generated answer.
-
+        
         Returns:
             str: The generated answer.
         """
@@ -192,15 +193,16 @@ class ResponseGenerator:
 def validate_query(query: str) -> (bool, str):
     """
     Validate the query by checking for common financial keywords.
-
+    
     Parameters:
         query (str): The user's query.
     
     Returns:
-        tuple: (bool, str) where bool is True if the query is valid, and str is an error message if not.
+        tuple: (bool, str) where bool is True if the query is valid, and str is an error
+        message if not.
     """
-    financial_keywords = ["revenue", "profit", "earnings", "financial", "statement", "balance sheet", "income",
-                          "cash flow", "quarter", "year", "growth"]
+    financial_keywords = ["revenue", "profit", "earnings", "financial", "statement",
+                          "balance sheet", "income", "cash flow", "quarter", "year", "growth"]
     query_lower = query.lower()
     if any(keyword in query_lower for keyword in financial_keywords):
         return True, ""
@@ -241,21 +243,21 @@ def combined_search(query: str, emb_retriever: EmbeddingRetriever, bm25_retrieve
     return sorted_chunks
 
 # -------------------------------
-# 7. Chatbot UI with Streamlit
+# 7. Chatbot UI with Streamlit (with Skeleton Loader)
 # -------------------------------
 
 def main():
     """
     The main function to run the RAG Chatbot using Streamlit.
     
-    It performs the following steps:
-      1. Validates the user input (query) using a guardrail.
+    Functionality:
+      1. Validates the user query using a guardrail.
       2. Loads and preprocesses the financial report.
-      3. Initializes the embedding and BM25 retrievers as well as the response generator.
-      4. Retrieves relevant context through an adaptive search combining both methods.
-      5. Generates and displays a response, along with a confidence score (computed as the average
-         embedding cosine similarity).
-      6. Maintains a conversation history for multi-turn interaction.
+      3. Initializes the retrievers and response generator.
+      4. Retrieves relevant context via adaptive (combined) retrieval.
+      5. Generates a response and computes a confidence score.
+      6. Displays a skeleton loader (spinner) while the query is being processed.
+      7. Maintains a conversation history for multi-turn interaction.
     """
     st.title("RAG Chatbot for Financial Statements")
     st.write("Ask questions about the company's financial reports (last two years).")
@@ -270,39 +272,41 @@ def main():
         submit_button = st.form_submit_button("Send")
     
     if submit_button and user_input:
-        # Validate query using guardrail
-        is_valid, message = validate_query(user_input)
-        if not is_valid:
-            response = "Guardrail Alert: " + message
-            avg_confidence = 0.0
-        else:
-            # Path to your financial report; ensure that this file exists.
-            data_path = os.path.join("data", "financial_report.txt")
-            report_text = load_financial_report(data_path)
-            chunks = chunk_text(report_text, max_length=300, overlap=50)
-            
-            # Instantiate retrievers and the response generator
-            emb_retriever = EmbeddingRetriever()
-            emb_retriever.add_documents(chunks)
-            bm25_retriever = BM25Retriever(chunks)
-            response_generator = ResponseGenerator()
-            
-            # Retrieve context and generate a response using combined adaptive retrieval
-            results = combined_search(user_input, emb_retriever, bm25_retriever, top_k=5)
-            top_chunks = [chunk for chunk, score in results[:3]]
-            context = "\n".join(top_chunks)
-            response = response_generator.generate_response(user_input, context)
-            
-            # Compute a dummy confidence score as the average of top 3 cosine similarity scores
-            emb_scores = [score for _, score in emb_retriever.search(user_input, top_k=3)]
-            avg_confidence = sum(emb_scores) / len(emb_scores) if emb_scores else 0.0
-        
-        # Append current conversation turn to the chat history session state
-        st.session_state.chat_history.append({
-            "user": user_input,
-            "bot": response,
-            "confidence": avg_confidence
-        })
+        # Show a loader while processing the query
+        with st.spinner("Processing query..."):
+            # Validate query using guardrail
+            is_valid, message = validate_query(user_input)
+            if not is_valid:
+                response = "Guardrail Alert: " + message
+                avg_confidence = 0.0
+            else:
+                # Load and preprocess the financial report
+                data_path = os.path.join("data", "financial_report.txt")
+                report_text = load_financial_report(data_path)
+                chunks = chunk_text(report_text, max_length=300, overlap=50)
+                
+                # Initialize retrievers and response generator
+                emb_retriever = EmbeddingRetriever()
+                emb_retriever.add_documents(chunks)
+                bm25_retriever = BM25Retriever(chunks)
+                response_generator = ResponseGenerator()
+                
+                # Retrieve context and generate a response (adaptive retrieval)
+                results = combined_search(user_input, emb_retriever, bm25_retriever, top_k=5)
+                top_chunks = [chunk for chunk, score in results[:3]]
+                context = "\n".join(top_chunks)
+                response = response_generator.generate_response(user_input, context)
+                
+                # Compute a dummy confidence score (average of top 3 cosine similarities)
+                emb_scores = [score for _, score in emb_retriever.search(user_input, top_k=3)]
+                avg_confidence = sum(emb_scores) / len(emb_scores) if emb_scores else 0.0
+                
+            # Append the current conversation to the chat history
+            st.session_state.chat_history.append({
+                "user": user_input,
+                "bot": response,
+                "confidence": avg_confidence
+            })
     
     # Display the conversation history
     for chat in st.session_state.chat_history:
