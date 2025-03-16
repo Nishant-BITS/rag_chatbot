@@ -28,10 +28,14 @@ import streamlit as st
 import numpy as np
 import math
 
-# Importing necessary modules for embedding, BM25, and response generation
+# Import necessary modules
 from sentence_transformers import SentenceTransformer, util
 from rank_bm25 import BM25Okapi
 from transformers import pipeline
+
+# Download NLTK 'punkt' resource at initialization to prevent LookupError in hosted environments
+import nltk
+nltk.download('punkt', quiet=True)
 
 # -------------------------------
 # 1. Data Collection & Preprocessing
@@ -72,9 +76,7 @@ def chunk_text(text: str, max_length: int = 150, overlap: int = 75) -> list:
     Returns:
         list: List of string chunks.
     """
-    import nltk
-    nltk.download('punkt', quiet=True)
-    # Tokenize the text into sentences
+    # Tokenize the text into sentences using NLTK's pre-downloaded 'punkt' data.
     sentences = nltk.tokenize.sent_tokenize(text)
 
     chunks = []
