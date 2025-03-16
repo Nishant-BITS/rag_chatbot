@@ -36,9 +36,7 @@ from transformers import pipeline
 # Download NLTK 'punkt' resource at initialization to prevent LookupError in hosted environments
 import nltk
 nltk.download('punkt', quiet=True)
-nltk.download('punkt_tab')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+nltk.download('punkt_tab', quiet=True)
 
 # -------------------------------
 # 1. Data Collection & Preprocessing
