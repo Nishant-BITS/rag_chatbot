@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 RAG Chatbot for Financial Statements
 
@@ -18,8 +16,7 @@ The tasks included are:
    - Validates that user queries are financially related by checking for key financial keywords.
 5. Application Interface using Streamlit:
    - A web-based interface that maintains conversation history, allows multi-turn interaction, 
-     displays a confidence score (derived from cosine similarity) with each response, and shows a 
-     loader while the query is being processed.
+     displays a confidence score with each response, and shows a loader while the query is being processed.
      
 Usage:
     Place your financial report in "data/financial_report.txt"
@@ -29,6 +26,7 @@ Usage:
 import os
 import streamlit as st
 import numpy as np
+import math
 
 # Importing necessary modules for embedding, BM25, and response generation
 from sentence_transformers import SentenceTransformer, util
@@ -53,30 +51,66 @@ def load_financial_report(filepath: str) -> str:
         text = f.read()
     return text
 
-def chunk_text(text: str, max_length: int = 300, overlap: int = 50) -> list:
+def chunk_text(text: str, max_length: int = 150, overlap: int = 75) -> list:
     """
-    Chunk text into pieces with a maximum number of words and with an overlap between chunks.
+    Chunk text into coherent pieces using sentence boundaries and overlapping sentences.
     
-    This overlapping technique (Chunk Merging) is used to preserve context across text segments.
-    
+    This function implements the "Chunk Merging" strategy:
+      - It splits the input text based on sentence tokenization using NLTK.
+      - Each chunk is assembled to have up to `max_length` words.
+      - To preserve context between chunks, the final sentences (accumulating at least `overlap` words)
+        from a finished chunk are added to the beginning of the next chunk.
+      
+    This merging of overlapping chunks helps capture complete ideas and is crucial for retrieving
+    well-contextualized information from the financial report.
+
     Parameters:
-        text (str): Input text.
-        max_length (int): Maximum number of words in a chunk.
-        overlap (int): Number of words that overlap between consecutive chunks.
-    
+        text (str): The input text to be chunked.
+        max_length (int): Maximum number of words per chunk (default: 150).
+        overlap (int): Minimum number of words to include as overlap between consecutive chunks (default: 75).
+
     Returns:
-        list: List of text chunks.
+        list: List of string chunks.
     """
-    words = text.split()
+    import nltk
+    nltk.download('punkt', quiet=True)
+    # Tokenize the text into sentences
+    sentences = nltk.tokenize.sent_tokenize(text)
+
     chunks = []
-    start = 0
-    while start < len(words):
-        end = start + max_length
-        chunk = words[start:end]
-        chunks.append(" ".join(chunk))
-        if end >= len(words):
-            break
-        start = end - overlap  # Overlap to include context in next chunk
+    current_chunk = []
+    current_word_count = 0
+
+    for sentence in sentences:
+        sentence_words = sentence.split()
+        # If adding this sentence does not exceed the maximum length, add it to the current chunk.
+        if current_word_count + len(sentence_words) <= max_length:
+            current_chunk.append(sentence)
+            current_word_count += len(sentence_words)
+        else:
+            # Append the current chunk once the max length is reached.
+            if current_chunk:
+                chunks.append(' '.join(current_chunk))
+            
+            # Prepare the new chunk by including overlapping sentences from the end of the current chunk.
+            overlapping_chunk = []
+            overlap_count = 0
+            # Reverse iterate over current_chunk to accumulate overlap.
+            for sent in reversed(current_chunk):
+                sent_word_count = len(sent.split())
+                overlap_count += sent_word_count
+                overlapping_chunk.insert(0, sent)
+                if overlap_count >= overlap:
+                    break
+            # Start the new chunk with overlapping sentences and the current sentence.
+            current_chunk = overlapping_chunk.copy()
+            current_chunk.append(sentence)
+            current_word_count = sum(len(s.split()) for s in current_chunk)
+    
+    # Append the last chunk if any exists.
+    if current_chunk:
+        chunks.append(' '.join(current_chunk))
+    
     return chunks
 
 # -------------------------------
@@ -87,7 +121,7 @@ class EmbeddingRetriever:
     """
     An embedding-based retriever that encodes text chunks and retrieves them based on cosine similarity.
     """
-    def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
+    def __init__(self, model_name: str = "t5-small"):
         """
         Initialize the embedding model and storage for document embeddings.
         """
@@ -141,8 +175,8 @@ class BM25Retriever:
         Search for the top_k relevant document chunks using BM25.
         
         Parameters:
-            query (str): The user query.
-            top_k (int): Number of top results to return.
+            query (str): The user's query.
+            top_k (int): Number of results to return.
         
         Returns:
             list: Each element is a tuple (chunk, BM25 score).
@@ -164,7 +198,7 @@ class ResponseGenerator:
     """
     A response generator that uses a language model to produce answers based on query and context.
     """
-    def __init__(self, model_name: str = "t5-small"):
+    def __init__(self, model_name: str = "t5-base"):
         """
         Initialize the response generation model.
         """
@@ -193,16 +227,23 @@ class ResponseGenerator:
 def validate_query(query: str) -> (bool, str):
     """
     Validate the query by checking for common financial keywords.
-    
+
     Parameters:
         query (str): The user's query.
-    
+
     Returns:
         tuple: (bool, str) where bool is True if the query is valid, and str is an error
         message if not.
     """
-    financial_keywords = ["revenue", "profit", "earnings", "financial", "statement",
-                          "balance sheet", "income", "cash flow", "quarter", "year", "growth"]
+    financial_keywords = [
+        "revenue", "profit", "earnings", "financial", "statement", "balance sheet",
+        "income", "cash flow", "quarter", "year", "growth", "sales", "dividend",
+        "expenditure", "expense", "operating", "margin", "investment", "capital",
+        "asset", "assets", "liability", "liabilities", "turnover", "cost", "forecast",
+        "order", "volume", "gross", "net", "ebitda", "cogs", "sg&a", "equity",
+        "depreciation", "amortization", "krw", "billion", "thousand", "wholesale",
+        "retail", "eco-friendly", "evs", "hevs", "phevs", "fcevs"
+    ]
     query_lower = query.lower()
     if any(keyword in query_lower for keyword in financial_keywords):
         return True, ""
@@ -210,31 +251,39 @@ def validate_query(query: str) -> (bool, str):
         return False, "Query does not appear to be related to financial statements. Please ask questions about the company's financials."
 
 # -------------------------------
-# 6. Adaptive Retrieval: Combining BM25 and Embedding Scores
+# 6. Advanced RAG Implementation: Adaptive Retrieval
 # -------------------------------
 
 def combined_search(query: str, emb_retriever: EmbeddingRetriever, bm25_retriever: BM25Retriever, top_k: int = 5):
     """
-    Combine the results from embedding-based and BM25-based retrieval methods.
+    Combine the search results from embedding-based and BM25-based retrieval methods.
     
+    This is the core of the "Advanced RAG" with Adaptive Retrieval:
+      - It first retrieves the top `top_k` candidates using the embedding-based method (semantics via cosine similarity).
+      - In parallel, the BM25 retriever obtains candidates based on exact keyword matches.
+      - The BM25 scores are normalized (by dividing by the maximum BM25 score) and then added to the embedding-based scores.
+      - The combined scores of candidate chunks are used to rank and select the most relevant pieces of the financial report.
+      
     Parameters:
-        query (str): The user's query.
-        emb_retriever (EmbeddingRetriever): Instance of the embedding retriever.
-        bm25_retriever (BM25Retriever): Instance of the BM25 retriever.
-        top_k (int): Number of top results to consider from each method.
-    
+        query (str): The user query.
+        emb_retriever (EmbeddingRetriever): Instance of embedding-based retriever.
+        bm25_retriever (BM25Retriever): Instance of BM25 keyword-based retriever.
+        top_k (int): Number of top results to consider from each method (default: 5).
+
     Returns:
-        list: Sorted list of (chunk, combined score) tuples.
+        list: Sorted list of tuples (chunk, combined_score) in descending order of relevance.
     """
     emb_results = emb_retriever.search(query, top_k=top_k)
     bm25_results = bm25_retriever.search(query, top_k=top_k)
     
     scores = {}
+    # Incorporate embedding-based scores.
     for chunk, score in emb_results:
         scores[chunk] = scores.get(chunk, 0) + score
         
+    # Normalize BM25 scores and incorporate them.
     if bm25_results:
-        max_bm25 = max([score for _, score in bm25_results])
+        max_bm25 = max(score for _, score in bm25_results)
         for chunk, score in bm25_results:
             normalized_score = score / max_bm25 if max_bm25 > 0 else 0
             scores[chunk] = scores.get(chunk, 0) + normalized_score
@@ -243,20 +292,34 @@ def combined_search(query: str, emb_retriever: EmbeddingRetriever, bm25_retrieve
     return sorted_chunks
 
 # -------------------------------
-# 7. Chatbot UI with Streamlit (with Skeleton Loader)
+# 7. Chatbot UI with Streamlit and Confidence Scoring
 # -------------------------------
+
+def logistic_confidence(score, midpoint=0.45, steepness=10):
+    """
+    Convert a raw cosine similarity score to a confidence score using a logistic function.
+    
+    Parameters:
+        score (float): The raw cosine similarity score.
+        midpoint (float): The value of the score at which the logistic function returns 0.5.
+        steepness (float): Controls how steep the transition is from low to high confidence.
+        
+    Returns:
+        float: A confidence score between 0 and 1.
+    """
+    return 1 / (1 + math.exp(-steepness * (score - midpoint)))
 
 def main():
     """
     The main function to run the RAG Chatbot using Streamlit.
     
-    Functionality:
+    It performs the following steps:
       1. Validates the user query using a guardrail.
       2. Loads and preprocesses the financial report.
       3. Initializes the retrievers and response generator.
-      4. Retrieves relevant context via adaptive (combined) retrieval.
+      4. Retrieves relevant context via Adaptive Retrieval by combining embedding-based and BM25 results.
       5. Generates a response and computes a confidence score.
-      6. Displays a skeleton loader (spinner) while the query is being processed.
+      6. Displays a loader while processing the query.
       7. Maintains a conversation history for multi-turn interaction.
     """
     st.title("RAG Chatbot for Financial Statements")
@@ -272,43 +335,49 @@ def main():
         submit_button = st.form_submit_button("Send")
     
     if submit_button and user_input:
-        # Show a loader while processing the query
         with st.spinner("Processing query..."):
             # Validate query using guardrail
             is_valid, message = validate_query(user_input)
             if not is_valid:
                 response = "Guardrail Alert: " + message
-                avg_confidence = 0.0
+                confidence = 0.0
             else:
                 # Load and preprocess the financial report
                 data_path = os.path.join("data", "financial_report.txt")
                 report_text = load_financial_report(data_path)
-                chunks = chunk_text(report_text, max_length=300, overlap=50)
+                # Process text into chunks using the chunk merging strategy.
+                chunks = chunk_text(report_text, max_length=150, overlap=75)
                 
-                # Initialize retrievers and response generator
+                # Initialize retrieval methods and response generation.
                 emb_retriever = EmbeddingRetriever()
                 emb_retriever.add_documents(chunks)
                 bm25_retriever = BM25Retriever(chunks)
                 response_generator = ResponseGenerator()
                 
-                # Retrieve context and generate a response (adaptive retrieval)
+                # Retrieve context using Advanced RAG (Adaptive Retrieval).
                 results = combined_search(user_input, emb_retriever, bm25_retriever, top_k=5)
                 top_chunks = [chunk for chunk, score in results[:3]]
                 context = "\n".join(top_chunks)
                 response = response_generator.generate_response(user_input, context)
                 
-                # Compute a dummy confidence score (average of top 3 cosine similarities)
-                emb_scores = [score for _, score in emb_retriever.search(user_input, top_k=3)]
-                avg_confidence = sum(emb_scores) / len(emb_scores) if emb_scores else 0.0
-                
-            # Append the current conversation to the chat history
+                # Compute confidence score using logistic scaling on the top 10 cosine similarity scores.
+                emb_results = emb_retriever.search(user_input, top_k=10)
+                raw_scores = [score for _, score in emb_results]
+                logistic_scores = [logistic_confidence(s) for s in raw_scores]
+                sorted_logistic = sorted(logistic_scores, reverse=True)
+                if len(sorted_logistic) >= 3:
+                    confidence = sum(sorted_logistic[:3]) / 3.0
+                elif sorted_logistic:
+                    confidence = sorted_logistic[0]
+                else:
+                    confidence = 0.0
+            
             st.session_state.chat_history.append({
                 "user": user_input,
                 "bot": response,
-                "confidence": avg_confidence
+                "confidence": confidence
             })
     
-    # Display the conversation history
     for chat in st.session_state.chat_history:
         st.markdown(f"**User:** {chat['user']}")
         st.markdown(f"**Bot:** {chat['bot']}")
