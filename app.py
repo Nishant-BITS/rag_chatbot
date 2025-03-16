@@ -33,9 +33,13 @@ from sentence_transformers import SentenceTransformer, util
 from rank_bm25 import BM25Okapi
 from transformers import pipeline
 
-# Download NLTK 'punkt' resource at initialization to prevent LookupError in hosted environments
+# --- NLTK Setup for Streamlit Cloud ---
+# Set a custom download directory (e.g., /tmp/nltk_data) and add it to nltk.data.path so that NLTK can find the resources.
 import nltk
-nltk.download('punkt', quiet=True)
+nltk_data_dir = '/tmp/nltk_data'
+nltk.download('punkt', quiet=True, download_dir=nltk_data_dir)
+if nltk_data_dir not in nltk.data.path:
+    nltk.data.path.append(nltk_data_dir)
 
 # -------------------------------
 # 1. Data Collection & Preprocessing
