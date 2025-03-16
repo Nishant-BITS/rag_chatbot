@@ -27,7 +27,7 @@ This repository contains an end-to-end Retrieval-Augmented Generation (RAG) Chat
 1. **Clone the Repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/NishantRout/rag_chatbot.git)
    cd <repository-folder>
    ```
 
@@ -58,7 +58,7 @@ This repository contains an end-to-end Retrieval-Augmented Generation (RAG) Chat
 Launch the chatbot application using Streamlit:
 
 ```bash
-streamlit run rag_chatbot.py
+streamlit run app.py
 ```
 
 This command will open your default web browser with the chatbot interface. When you enter a query, a loader spinner will be displayed while the app processes your request.
@@ -70,7 +70,7 @@ To deploy your app to the Streamlit Community Cloud:
 1. **Push your code to GitHub:**  
    Ensure your repository includes the following:
 
-   - `rag_chatbot.py` (the main app file)
+   - `app.py` (the main app file)
    - `requirements.txt` (list of dependencies)
    - `data/financial_report.txt` (or instructions to create it)
 
@@ -85,7 +85,7 @@ To deploy your app to the Streamlit Community Cloud:
 .
 ├── data
 │   └── financial_report.txt    # Your financial report file
-├── app.py              # Main application code
+├── app.py                      # Main application code
 ├── requirements.txt            # List of dependencies
 └── README.md                   # This file
 ```
