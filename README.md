@@ -46,6 +46,7 @@ This repository contains an end-to-end Retrieval-Augmented Generation (RAG) Chat
    - rank-bm25
    - transformers
    - numpy
+   - nltk
 
 ## Data Preparation
 
@@ -84,7 +85,7 @@ To deploy your app to the Streamlit Community Cloud:
 .
 ├── data
 │   └── financial_report.txt    # Your financial report file
-├── rag_chatbot.py              # Main application code
+├── app.py              # Main application code
 ├── requirements.txt            # List of dependencies
 └── README.md                   # This file
 ```
@@ -95,7 +96,3 @@ To deploy your app to the Streamlit Community Cloud:
 - [Rank-BM25](https://pypi.org/project/rank-bm25/)
 - [Transformers by Hugging Face](https://huggingface.co/transformers/)
 - [Streamlit](https://streamlit.io/)
-
-## License
-
-This project is licensed under the MIT License.
