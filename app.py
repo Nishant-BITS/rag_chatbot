@@ -124,7 +124,7 @@ class EmbeddingRetriever:
     """
     An embedding-based retriever that encodes text chunks and retrieves them based on cosine similarity.
     """
-    def __init__(self, model_name: str = "t5-small"):
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
         """
         Initialize the embedding model and storage for document embeddings.
         """
@@ -201,7 +201,7 @@ class ResponseGenerator:
     """
     A response generator that uses a language model to produce answers based on query and context.
     """
-    def __init__(self, model_name: str = "t5-base"):
+    def __init__(self, model_name: str = "t5-small"):
         """
         Initialize the response generation model.
         """
