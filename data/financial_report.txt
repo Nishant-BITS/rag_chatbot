@@ -1,124 +1,304 @@
+Hyundai Motor Company – Q1 2024 Financial Report
 
-Meta Reports Fourth Quarter and Full Year 2024 Results
+Date: April 25, 2024
 
-MENLO PARK, Calif. – January 29, 2025 – Meta Platforms, Inc. (Nasdaq: META) today reported financial results for the 
-quarter and full year ended December 31, 2024.
+1. Sales Summary
+-----------------
+1.1 Global Wholesale / Retail Sales
+Total Global Sales: 19,436 thousand units (+2.8% YoY)
 
-"We continue to make good progress on AI, glasses, and the future of social media," said Mark Zuckerberg, Meta founder 
-and CEO. "I'm excited to see these efforts scale further in 2025."
+Regional Breakdown:
+- Korea: 1,143 thousand units (+11.5% YoY)
+- US: 4,698 thousand units (+4.4% YoY)
+- China: 4,190 thousand units (+5.9% YoY)
+- Europe: 3,760 thousand units (+4.7% YoY)
+- India: 1,007 thousand units (-1.5% YoY)
+- Others: 4,638 thousand units (+1.2% YoY)
 
+Sales by Vehicle Type:
+- SUVs: 57.2%
+- Passenger Vehicles (PV): 37.2%
+- Commercial Vehicles (CV): 5.6%
 
-Fourth Quarter and Full Year 2024 Financial Highlights
+1.2 Eco-Friendly Vehicle Sales
+Total Eco-Friendly Vehicles Sold: 1,244 thousand units (+16.5% YoY)
+Breakdown:
+- EVs: 54.7% of eco-friendly sales
+- HEVs: 40.1%
+- PHEVs: 6.7%
+- FCEVs: 6.3%
 
-Revenue:
-- Q4 2024: $48.39 billion (+21% YoY)
-- Full Year 2024: $164.50 billion (+22% YoY)
+2. Financial Summary
+--------------------
+2.1 Key Financial Metrics (Billion KRW)
+- Revenue: Q1 2023: 37,770 | Q4 2023: 41,669 | Q1 2024: 40,659 | YoY Change: +7.6% | QoQ Change: -2.4%
+- Cost of Goods Sold (COGS): Q1 2023: 29,999 | Q4 2023: 33,317 | Q1 2024: 32,231 | YoY Change: +7.4% | QoQ Change: -3.3%
+- Gross Profit: Q1 2023: 7,771 | Q4 2023: 8,352 | Q1 2024: 8,428 | YoY Change: +8.4% | QoQ Change: +0.9%
+- SG&A Expenses: Q1 2023: 4,129 | Q4 2023: 4,944 | Q1 2024: 4,870 | YoY Change: +18.0% | QoQ Change: -1.5%
+- Operating Income: Q1 2023: 3,642 | Q4 2023: 3,408 | Q1 2024: 3,557 | YoY Change: -2.3% | QoQ Change: +4.4%
+- Net Income: Q1 2023: 3,419 | Q4 2023: 2,203 | Q1 2024: 3,376 | YoY Change: -1.3% | QoQ Change: +53.3%
+- EBITDA: Q1 2023: 4,968 | Q4 2023: 4,709 | Q1 2024: 4,839 | YoY Change: -2.6% | QoQ Change: +2.8%
 
-Income & Expenses:
-- Costs & Expenses: $25.02 billion (Q4), $95.12 billion (Full Year)
-- Income from Operations: $23.37 billion (Q4), $69.38 billion (Full Year)
-- Operating Margin: 48% (Q4), 42% (Full Year)
-- Net Income: $20.84 billion (Q4), $62.36 billion (Full Year)
-- EPS: $8.02 (Q4), $23.86 (Full Year)
+2.2 Financial Ratios
+- Gross Margin: 20.7%
+- Operating Profit Margin (OPM): 8.7%
+- Net Income Margin: 8.3%
+- Current Ratio: 146.5%
+- Debt to Equity Ratio: 125.7%
 
-Operational Highlights:
+3. Statement of Financial Position (Billion KRW)
+- Total Assets: Q4 2023: 282,463 | Q1 2024: 295,934 | Change: +13,471 | % Change: +4.8%
+- Current Assets: Q4 2023: 101,725 | Q1 2024: 106,084 | Change: +4,359 | % Change: +4.3%
+- Liabilities: Q4 2023: 180,654 | Q1 2024: 191,027 | Change: +10,373 | % Change: +5.7%
+- Equity: Q4 2023: 101,809 | Q1 2024: 104,906 | Change: +3,097 | % Change: +3.0%
 
-- Family daily active people (DAP): 3.35 billion (Dec 2024, +5% YoY)
-- Ad impressions: +6% (Q4), +11% (Full Year)
-- Average price per ad: +14% (Q4), +10% (Full Year)
-- Capital Expenditures: $14.84 billion (Q4), $39.23 billion (Full Year)
-- Cash & Marketable Securities: $77.81 billion (as of Dec 31, 2024)
-- Long-Term Debt: $28.83 billion
-- Headcount: 74,067 (+10% YoY)
+4. Statement of Cash Flows (Billion KRW)
+- Beginning Cash Balance: Q1 2023: 20,865 | Q2 2023: 22,369 | Q3 2023: 20,778 | Q4 2023: 20,313 | Q1 2024: 19,167
+- Net Income: Q1 2023: 3,419 | Q2 2023: 3,347 | Q3 2023: 3,304 | Q4 2023: 2,203 | Q1 2024: 3,376
+- Depreciation & Amortization: Q1 2023: 1,251 | Q2 2023: 1,239 | Q3 2023: 1,226 | Q4 2023: 1,231 | Q1 2024: 1,203
+- Acquisition of Assets: Q1 2023: -1,779 | Q2 2023: -1,799 | Q3 2023: -2,013 | Q4 2023: -3,261 | Q1 2024: -2,236
+- Ending Cash Balance: Q1 2023: 22,369 | Q2 2023: 20,778 | Q3 2023: 20,313 | Q4 2023: 19,167 | Q1 2024: 19,669
 
-CFO Outlook for 2025:
+5. Key Highlights & Insights
+- Revenue Growth: Increased by 7.6% YoY, primarily driven by eco-friendly vehicle sales.
+- Operating Profit Decline: Decreased by 2.3% YoY due to increased SG&A expenses.
+- Net Income Recovery: Significant QoQ increase (+53.3%) due to improved financial performance.
+- Debt Increase: Total debt rose by 5.7% to 131,882 billion KRW.
 
-- Q1 2025 Revenue Estimate: $39.5B - $41.8B (+8-15% YoY)
-- Total Expenses 2025: Expected between $114B - $119B
-- Capital Expenditures 2025: Expected $60B - $65B
-- Tax Rate Estimate: 12-15%
-
-Business Segments:
-
-Family of Apps (FoA):
-- Revenue: $47.3B (Q4), $162.4B (Full Year)
-- Operating Income: $87.1B (Full Year)
-
-Reality Labs (RL):
-- Revenue: $1.1B (Q4), $2.1B (Full Year)
-- Operating Loss: -$17.7B
-
-Balance Sheet (as of Dec 31, 2024):
-
-Assets:
-- Cash & Equivalents: $43.89B
-- Marketable Securities: $33.93B
-- Accounts Receivable: $16.99B
-- Total Assets: $276.05B
-
-Liabilities:
-- Accounts Payable: $7.69B
-- Operating Lease Liabilities: $18.29B
-- Long-Term Debt: $28.83B
-- Total Liabilities: $93.42B
-
-Stockholders’ Equity:
-- Common Stock & Paid-In Capital: $83.23B
-- Retained Earnings: $102.51B
-- Total Equity: $182.64B
-
-Cash Flow Summary:
-- Operating Cash Flow: $91.3B
-- Investing Cash Flow: -$47.1B
-- Financing Cash Flow: -$40.8B
+End of Report.
 
 
-Tata Motors Standalone Balance Sheet
 
-Equities and Liabilities:
+Hyundai Motor Company – Q2 2024 Financial Report
 
-Shareholders' Funds:
-- Equity Share Capital: Rs. 766.50 Cr (Mar 2024), Rs. 766.02 Cr (Mar 2023)
-- Reserves and Surplus: Rs. 29,374.83 Cr (Mar 2024), Rs. 21,701.37 Cr (Mar 2023)
-- Total Shareholders’ Funds: Rs. 30,141.33 Cr (Mar 2024), Rs. 22,467.39 Cr (Mar 2023)
+Date: July 25, 2024
 
-Non-Current Liabilities:
-- Long Term Borrowings: Rs. 5,235.67 Cr (Mar 2024)
-- Deferred Tax Liabilities (Net): Rs. 49.78 Cr
-- Other Long Term Liabilities: Rs. 1,392.16 Cr
-- Long Term Provisions: Rs. 1,936.92 Cr
-- Total Non-Current Liabilities: Rs. 8,614.53 Cr
+1. Sales Summary
+-----------------
+1.1 Global Wholesale / Retail Sales
+Total Global Sales: 20,549 thousand units (+1.0% YoY)
 
-Current Liabilities:
-- Short Term Borrowings: Rs. 8,535.37 Cr
-- Trade Payables: Rs. 8,826.46 Cr
-- Other Current Liabilities: Rs. 8,830.41 Cr
-- Short Term Provisions: Rs. 1,133.92 Cr
-- Total Current Liabilities: Rs. 27,326.16 Cr
+Regional Breakdown:
+- Korea: 1,034 thousand units (+3.0% YoY)
+- US: 4,129 thousand units (+0.0% YoY)
+- China: 4,295 thousand units (+3.0% YoY)
+- Europe: 5,230 thousand units (-2.0% YoY)
+- India: 1,057 thousand units (-0.2% YoY)
+- Others: 4,804 thousand units (+2.1% YoY)
 
-Total Capital and Liabilities: Rs. 66,083.74 Cr
+Sales by Vehicle Type:
+- SUVs: 54.8%
+- Passenger Vehicles (PV): 39.6%
+- Commercial Vehicles (CV): 5.6%
 
-Assets:
+1.2 Eco-Friendly Vehicle Sales
+Total Eco-Friendly Vehicles Sold: 1,057 thousand units (-0.3% YoY)
+Breakdown:
+- EVs: 54.7% of eco-friendly sales
+- HEVs: 40.1%
+- PHEVs: 6.7%
+- FCEVs: 6.3%
 
-Non-Current Assets:
-- Tangible Assets: Rs. 11,990.26 Cr
-- Intangible Assets: Rs. 2,353.79 Cr
-- Capital Work-In-Progress: Rs. 645.03 Cr
-- Intangible Assets Under Development: Rs. 588.92 Cr
-- Fixed Assets: Rs. 15,578.00 Cr
-- Non-Current Investments: Rs. 30,315.57 Cr
-- Deferred Tax Assets (Net): Rs. 1,558.65 Cr
-- Long Term Loans and Advances: Rs. 101.89 Cr
-- Other Non-Current Assets: Rs. 3,321.96 Cr
-- Total Non-Current Assets: Rs. 50,876.07 Cr
+2. Financial Summary
+--------------------
+2.1 Key Financial Metrics (Billion KRW)
+- Revenue: Q2 2023: 42,233 | Q1 2024: 40,659 | Q2 2024: 45,021 | YoY Change: +6.6% | QoQ Change: +10.7%
+- Cost of Goods Sold (COGS): Q2 2023: 33,335 | Q1 2024: 32,231 | Q2 2024: 35,284 | YoY Change: +5.8% | QoQ Change: +9.5%
+- Gross Profit: Q2 2023: 8,898 | Q1 2024: 8,428 | Q2 2024: 9,737 | YoY Change: +9.4% | QoQ Change: +15.5%
+- SG&A Expenses: Q2 2023: 4,650 | Q1 2024: 4,871 | Q2 2024: 5,458 | YoY Change: +17.4% | QoQ Change: +12.1%
+- Operating Income: Q2 2023: 4,248 | Q1 2024: 3,557 | Q2 2024: 4,279 | YoY Change: +0.7% | QoQ Change: +20.3%
+- Net Income: Q2 2023: 3,347 | Q1 2024: 3,376 | Q2 2024: 4,174 | YoY Change: +24.7% | QoQ Change: +23.6%
+- EBITDA: Q2 2023: 5,542 | Q1 2024: 4,839 | Q2 2024: 5,552 | YoY Change: +0.2% | QoQ Change: +14.7%
 
-Current Assets:
-- Current Investments: Rs. 1,993.50 Cr
-- Inventories: Rs. 3,470.38 Cr
-- Trade Receivables: Rs. 2,765.16 Cr
-- Cash and Cash Equivalents: Rs. 5,150.96 Cr
-- Short Term Loans and Advances: Rs. 132.19 Cr
-- Other Current Assets: Rs. 1,695.48 Cr
-- Total Current Assets: Rs. 15,207.67 Cr
+2.2 Financial Ratios
+- Gross Margin: 21.6%
+- Operating Profit Margin (OPM): 9.5%
+- Net Income Margin: 9.3%
+- Current Ratio: 145.5%
+- Debt to Equity Ratio: 125.4%
 
-Total Assets: Rs. 66,083.74 Cr
+3. Statement of Financial Position (Billion KRW)
+- Total Assets: Q4 2023: 282,463 | Q2 2024: 306,928 | Change: +24,465 | % Change: +8.7%
+- Current Assets: Q4 2023: 101,725 | Q2 2024: 106,327 | Change: +4,602 | % Change: +4.5%
+- Liabilities: Q4 2023: 180,654 | Q2 2024: 197,119 | Change: +16,465 | % Change: +9.1%
+- Equity: Q4 2023: 101,809 | Q2 2024: 109,809 | Change: +8,000 | % Change: +7.9%
+
+4. Statement of Cash Flows (Billion KRW)
+- Beginning Cash Balance: Q2 2023: 22,369 | Q3 2023: 20,778 | Q4 2023: 20,313 | Q1 2024: 19,167 | Q2 2024: 19,669
+- Net Income: Q2 2023: 3,347 | Q3 2023: 3,304 | Q4 2023: 2,203 | Q1 2024: 3,376 | Q2 2024: 4,174
+- Depreciation & Amortization: Q2 2023: 1,239 | Q3 2023: 1,226 | Q4 2023: 1,231 | Q1 2024: 1,203 | Q2 2024: 1,195
+- Acquisition of Assets: Q2 2023: -1,799 | Q3 2023: -2,013 | Q4 2023: -3,261 | Q1 2024: -2,236 | Q2 2024: -2,343
+- Ending Cash Balance: Q2 2023: 20,778 | Q3 2023: 20,313 | Q4 2023: 19,167 | Q1 2024: 19,669 | Q2 2024: 18,146
+
+5. Key Highlights & Insights
+- Revenue Growth: Increased by 6.6% YoY, primarily driven by automotive and finance sector growth.
+- Operating Profit Growth: Increased by 0.7% YoY and 20.3% QoQ, driven by improved cost control.
+- Net Income Surge: Up 24.7% YoY and 23.6% QoQ due to higher revenue and operational efficiency.
+- Debt Increase: Total debt rose by 10.4% to 137,697 billion KRW.
+
+End of Report.
+
+
+
+Hyundai Motor Company – Q3 2024 Financial Report
+
+Date: October 24, 2024
+
+1. Sales Summary
+-----------------
+1.1 Global Wholesale / Retail Sales
+Total Global Sales: 20,601 thousand units (-2.2% YoY)
+
+Regional Breakdown:
+- Korea: 393 thousand units (-2.5% YoY)
+- US: 3,911 thousand units (-1.8% YoY)
+- Europe: 3,727 thousand units (-4.2% YoY)
+- China: 5,638 thousand units (-6.0% YoY)
+- India: 1,065 thousand units (-1.8% YoY)
+- Others: 5,867 thousand units (-1.7% YoY)
+
+Sales by Vehicle Type:
+- SUVs: 56.3%
+- Passenger Vehicles (PV): 37.2%
+- Commercial Vehicles (CV): 6.6%
+
+1.2 Eco-Friendly Vehicle Sales
+Total Eco-Friendly Vehicles Sold: 1,012 thousand units (-3.2% YoY)
+Breakdown:
+- EVs: 56.3% of eco-friendly sales
+- HEVs: 37.5%
+- PHEVs: 6.0%
+- FCEVs: 0.1%
+
+2. Financial Summary
+--------------------
+2.1 Key Financial Metrics (Billion KRW)
+- Revenue: Q3 2023: 40,991 | Q2 2024: 45,021 | Q3 2024: 42,928 | YoY Change: +4.7% | QoQ Change: -4.6%
+- Cost of Goods Sold (COGS): Q3 2023: 32,528 | Q2 2024: 35,283 | Q3 2024: 34,430 | YoY Change: +5.8% | QoQ Change: -2.4%
+- Gross Profit: Q3 2023: 8,463 | Q2 2024: 9,737 | Q3 2024: 8,498 | YoY Change: +0.4% | QoQ Change: -12.7%
+- SG&A Expenses: Q3 2023: 4,635 | Q2 2024: 5,458 | Q3 2024: 4,917 | YoY Change: +6.1% | QoQ Change: -9.9%
+- Operating Income: Q3 2023: 3,828 | Q2 2024: 4,279 | Q3 2024: 3,581 | YoY Change: -6.5% | QoQ Change: -16.3%
+- Net Income: Q3 2023: 3,303 | Q2 2024: 4,174 | Q3 2024: 3,206 | YoY Change: -3.0% | QoQ Change: -23.2%
+- EBITDA: Q3 2023: 5,124 | Q2 2024: 5,552 | Q3 2024: 4,854 | YoY Change: -5.3% | QoQ Change: -12.6%
+
+2.2 Financial Ratios
+- Gross Margin: 19.8%
+- Operating Profit Margin (OPM): 8.3%
+- Net Income Margin: 7.5%
+- Current Ratio: 153.5%
+- Debt to Equity Ratio: 122.3%
+
+3. Statement of Financial Position (Billion KRW)
+- Total Assets: Q4 2023: 282,463 | Q3 2024: 306,087 | Change: +23,624 | % Change: +8.4%
+- Current Assets: Q4 2023: 101,725 | Q3 2024: 104,093 | Change: +2,368 | % Change: +2.3%
+- Liabilities: Q4 2023: 180,654 | Q3 2024: 194,573 | Change: +13,919 | % Change: +7.7%
+- Equity: Q4 2023: 101,809 | Q3 2024: 111,514 | Change: +9,705 | % Change: +9.5%
+
+4. Statement of Cash Flows (Billion KRW)
+- Beginning Cash Balance: Q3 2023: 20,778 | Q4 2023: 20,313 | Q1 2024: 19,167 | Q2 2024: 19,669 | Q3 2024: 18,146
+- Net Income: Q3 2023: 3,303 | Q4 2023: 2,203 | Q1 2024: 3,376 | Q2 2024: 4,174 | Q3 2024: 3,206
+- Depreciation & Amortization: Q3 2023: 1,226 | Q4 2023: 1,231 | Q1 2024: 1,203 | Q2 2024: 1,195 | Q3 2024: 1,195
+- Acquisition of Assets: Q3 2023: -2,013 | Q4 2023: -3,261 | Q1 2024: -2,236 | Q2 2024: -2,367 | Q3 2024: -2,343
+- Ending Cash Balance: Q3 2023: 20,313 | Q4 2023: 19,167 | Q1 2024: 19,669 | Q2 2024: 18,146 | Q3 2024: 14,992
+
+5. Key Highlights & Insights
+- Revenue Growth: Increased by 4.7% YoY, primarily driven by the automotive and finance sectors.
+- Operating Profit Decline: Decreased by 6.5% YoY due to higher operating expenses.
+- Net Income Drop: Down 3.0% YoY and 23.2% QoQ due to increased financial costs and market challenges.
+- Debt Increase: Total debt rose by 9.3% to 136,363 billion KRW.
+
+End of Report.
+
+
+Hyundai Motor Company – Q4 2024 and Annual Business Results
+
+Date: January 23, 2025
+
+1. Sales Summary
+-----------------
+1.1 Global Wholesale / Retail Sales (Quarterly)
+Total Global Sales: 23,372 thousand units (+5.2% YoY)
+
+Regional Breakdown:
+- Korea: 438 thousand units (-2.0% YoY)
+- US: 4,229 thousand units (+8.0% YoY)
+- Europe: 3,904 thousand units (-3.9% YoY)
+- China: 7,742 thousand units (+13.0% YoY)
+- India: 1,079 thousand units (+5.6% YoY)
+- Others: 6,980 thousand units (+4.1% YoY)
+
+1.2 Global Wholesale / Retail Sales (Annual)
+Total Global Sales: 84,292 thousand units (+2.0% YoY)
+
+Regional Breakdown:
+- Korea: 1,633 thousand units (-6.5% YoY)
+- US: 16,041 thousand units (+2.7% YoY)
+- Europe: 16,129 thousand units (+0.3% YoY)
+- China: 23,245 thousand units (+2.4% YoY)
+- India: 4,320 thousand units (+4.5% YoY)
+- Others: 23,924 thousand units (+1.9% YoY)
+
+Sales by Vehicle Type:
+- SUVs: 59.8%
+- Passenger Vehicles (PV): 34.7%
+- Commercial Vehicles (CV): 5.5%
+
+1.3 Eco-Friendly Vehicle Sales (Quarterly)
+Total Eco-Friendly Vehicles Sold: 1,066 thousand units (-2.2% YoY)
+Breakdown:
+- EVs: 56.3% of eco-friendly sales
+- HEVs: 37.5%
+- PHEVs: 5.0%
+- FCEVs: 0.1%
+
+1.4 Eco-Friendly Vehicle Sales (Annual)
+Total Eco-Friendly Vehicles Sold: 4,142 thousand units (-1.8% YoY)
+Breakdown:
+- EVs: 54.5% of eco-friendly sales
+- HEVs: 37.3%
+- PHEVs: 6.6%
+- FCEVs: 0.1%
+
+2. Financial Summary (Quarterly)
+--------------------------------
+2.1 Key Financial Metrics (Billion KRW)
+- Revenue: Q4 2023: 41,669 | Q3 2024: 42,928 | Q4 2024: 46,624 | YoY Change: +11.9% | QoQ Change: +8.6%
+- Cost of Goods Sold (COGS): Q4 2023: 33,317 | Q3 2024: 34,430 | Q4 2024: 37,537 | YoY Change: +12.7% | QoQ Change: +9.0%
+- Gross Profit: Q4 2023: 8,352 | Q3 2024: 8,498 | Q4 2024: 9,086 | YoY Change: +8.8% | QoQ Change: +6.9%
+- SG&A Expenses: Q4 2023: 4,944 | Q3 2024: 4,917 | Q4 2024: 6,264 | YoY Change: +26.7% | QoQ Change: +27.4%
+- Operating Income: Q4 2023: 3,408 | Q3 2024: 3,581 | Q4 2024: 2,822 | YoY Change: -17.2% | QoQ Change: -21.2%
+- Net Income: Q4 2023: 2,203 | Q3 2024: 3,206 | Q4 2024: 2,474 | YoY Change: +12.3% | QoQ Change: -22.8%
+- EBITDA: Q4 2023: 4,709 | Q3 2024: 4,854 | Q4 2024: 3,591 | YoY Change: -23.7% | QoQ Change: -26.0%
+
+2.2 Financial Summary (Annual)
+- Revenue: 2023: 162,664 | 2024: 175,231 | Change: +7.7%
+- Cost of Goods Sold (COGS): 2023: 129,179 | 2024: 139,482 | Change: +8.0%
+- Gross Profit: 2023: 33,484 | 2024: 35,749 | Change: +6.8%
+- SG&A Expenses: 2023: 18,357 | 2024: 21,510 | Change: +17.2%
+- Operating Income: 2023: 15,127 | 2024: 14,240 | Change: -5.9%
+- Net Income: 2023: 12,272 | 2024: 13,230 | Change: +7.8%
+- EBITDA: 2023: 20,286 | 2024: 18,836 | Change: -7.2%
+
+3. Statement of Financial Position (Billion KRW)
+-----------------------------------------------
+- Total Assets: 2023: 282,463 | 2024: 339,798 | Change: +20.3%
+- Current Assets: 2023: 101,725 | 2024: 115,764 | Change: +13.8%
+- Liabilities: 2023: 180,654 | 2024: 219,522 | Change: +21.5%
+- Equity: 2023: 101,809 | 2024: 120,276 | Change: +18.1%
+
+4. Statement of Cash Flows (Billion KRW)
+----------------------------------------
+- Beginning Cash Balance: Q4 2023: 20,313 | Q1 2024: 19,167 | Q2 2024: 19,669 | Q3 2024: 18,146 | Q4 2024: 14,992
+- Net Income: Q4 2023: 2,203 | Q1 2024: 3,376 | Q2 2024: 4,174 | Q3 2024: 3,206 | Q4 2024: 2,474
+- Depreciation & Amortization: Q4 2023: 1,231 | Q1 2024: 1,203 | Q2 2024: 1,195 | Q3 2024: 1,195 | Q4 2024: 1,117
+- Acquisition of Assets: Q4 2023: -3,261 | Q1 2024: -2,236 | Q2 2024: -2,343 | Q3 2024: -2,437 | Q4 2024: -2,984
+- Ending Cash Balance: Q4 2023: 19,167 | Q1 2024: 19,669 | Q2 2024: 18,146 | Q3 2024: 14,992 | Q4 2024: 19,015
+
+5. Key Highlights & Insights
+----------------------------
+- Revenue Growth: Increased by 7.7% YoY, with strong contributions from the finance sector.
+- Operating Income Decline: Down 5.9% YoY due to increased SG&A expenses and cost pressures.
+- Net Income Increase: Up 7.8% YoY, indicating strong financial resilience.
+- Debt Increase: Total debt rose by 25.4% to 156,489 billion KRW.
+
+End of Report.
